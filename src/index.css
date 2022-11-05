@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext');
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+
+table {
+  max-width: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: left;
+}
+
+/* Main */
+.main {
+  flex-grow: 1;
+}
+
+/* Card */
+.card img {
+  max-height: 350px;
+}
+
+/* Preloader */
+.preloader {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 10px auto;
+}
+
+.preloader span {
+  position: absolute;
+
+  width: 40%;
+  height: 40%;
+  margin: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  animation: spin 2s ease infinite;
+}
+
+.preloader :first-child {
+  background: #19a68c;
+
+  animation-delay: -1.5s;
+}
+
+.preloader :nth-child(2) {
+  background: #ff748b;
+
+  animation-delay: -1s;
+}
+
+.preloader :nth-child(3) {
+  background: #ffb676;
+
+  animation-delay: -.5s;
+}
+
+.preloader :last-child {
+  background: #727e86;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
+}
